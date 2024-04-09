@@ -52,7 +52,6 @@ jobs:
       - name: Install Dependencies and build
         run: |
             yarn install
-            yarn build
             
       - name: start backend
         run: nohup yarn start &
