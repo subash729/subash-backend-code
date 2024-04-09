@@ -55,7 +55,7 @@ jobs:
             yarn build
             
       - name: start backend
-        run: yarn start
+        run: yarn start &
 
   stackhawk-hawkscan:
     runs-on: ubuntu-latest
