@@ -53,14 +53,14 @@ jobs:
         run: |
             yarn install
             
-      - name: start backend
+      - name: Start Backend
         run: nohup yarn start &
 
-  stackhawk-hawkscan:
-    runs-on: ubuntu-latest
-    needs: [install-and-build]
-    steps:
-    - uses: actions/checkout@v2
-    - uses: stackhawk/hawkscan-action@v2.1.3
-      with:
-        apiKey: ${{ secrets.HAWK_API_KEY }}
+      - name: Stackhawk
+        uses: actions/checkout@v2
+        
+      - name: Run Hawkscan
+        uses: stackhawk/hawkscan-action@v2.1.3
+        with:
+          apiKey: ${{ secrets.HAWK_API_KEY }}
+
