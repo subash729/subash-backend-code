@@ -38,10 +38,10 @@ jobs:
         languages: ${{ matrix.language }}
 
     - name: Install dependencies
-      run: npm ci
+      run: yarn install
 
     - name: Build project
-      run: npm run build
+      run: yarn start
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
